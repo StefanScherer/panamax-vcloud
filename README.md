@@ -11,7 +11,7 @@ Download the latest stable release of CoreOS and convert it to OVA.
 ./coreos-vmx-to-ova.sh
 ```
 
-Upload OVA file to your vCloud catalog.
+Upload OVA file `coreos_production_vmware_insecure/coreos/coreos.insecure.ova` to your vCloud catalog.
 
 ## Create vApp panamax
 
