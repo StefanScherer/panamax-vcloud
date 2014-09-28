@@ -1,18 +1,22 @@
-# coreos-vcloud
+# panamax-vcloud
 
-## Build OVA to upload into vCloud
+This are some installation steps needed to spin up a [panamax.io](http://panamax.io) server in VMware vCloud.
+
+## Build CoreOS OVA to upload into vCloud
 See also https://coreos.com/docs/running-coreos/platforms/vmware/
+
+Download the latest stable release of CoreOS and convert it to OVA.
 
 ```bash
 ./coreos-vmx-to-ova.sh
 ```
 
-Upload OVA file to vCloud catalog.
+Upload OVA file to your vCloud catalog.
 
 ## Create vApp panamax
 
 Create a new vApp based on that catalog.
-Set disk size to eg. 40 GByte, RAM and CPUs as you need.
+Set disk size to eg. 40 GByte, 4 GB RAM and 4 CPUs.
 Power on the vApp.
 
 As it has no VMware Tools installed, the vCloud Director does not show you the IP address of the panamax machine.
@@ -60,4 +64,12 @@ cd /var/panamax
 ./coreos install --stable
 ```
 
+## Open up the Panamax UI
 
+From your computer open up the Panamax UI through your vCloud Edge Gateway.
+
+```
+open http://10.100.50.4:3000
+```
+
+Have fun!
